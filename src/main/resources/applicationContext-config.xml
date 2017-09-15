@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd"
+	default-autowire="byName">
+	<!-- 导入 applicationContext.properties 文件 -->
+	<bean class="com.chocod.summarize.config.PropertyPlaceholderConfigurerEx">
+		<property name="locations">
+			<list>
+				<value>${config.path}/*.properties</value>
+			</list>
+		</property>
+		<!-- 需要加载的配置文件名称 -->
+		<property name="propertyFileNames"> 
+			<list>				
+				<value>application.properties</value>				
+				<value>log4j.properties</value>
+			</list>
+	    </property>
+		<property name="groupId" value="${groupId}"></property>
+		<property name="artifactId" value="${artifactId}"></property>
+		<property name="version" value="${VERSION}"></property>
+		<property name="buildTime" value="${current.timestamp}"></property>
+		<property name="fileEncoding" value="UTF-8"></property>
+	</bean>
+</beans>

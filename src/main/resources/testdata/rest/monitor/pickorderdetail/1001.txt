@@ -1,0 +1,16 @@
+[{
+        "attachName": "切片",
+        "attachNo": "10",
+        "orderNo": "2017CP00001",
+        "pickGoodsTime": "2017-03-01 14:16:06",
+        "pickNum": 2,
+        "pickPcs": 2,
+        "pickStatus": 3,
+        "productName": "测试商品",
+        "productNo": "10001",
+        "productNum": 2,
+        "productPcs": 2,
+        "productType": 1,
+        "productUnit": "个",
+        "rtNo": "10001111"
+}]

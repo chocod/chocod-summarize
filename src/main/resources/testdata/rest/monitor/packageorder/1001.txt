@@ -1,0 +1,20 @@
+{
+    "curPage": 1,
+    "pageNum": 10,
+    "totalNum": 1,
+    "totalPage": 1,
+    "dataList": [
+        {
+            "pickAreaName": "生鲜",
+            "pickAreaNo": "01",
+            "pickCreateTime": "2017-03-01 11:17:38",
+            "pickEmployeeName": "张三",
+            "pickEmployeeNo": "100001",
+            "pickFinishTime": "2017-03-01 11:17:38",
+            "pickOrderNo": "100120170301080000101",
+            "pickStartTime": "2017-03-01 11:17:38",
+            "stallNo": "01",
+            "waveOrderNo": "1001201703010800001"
+        }
+    ]
+}

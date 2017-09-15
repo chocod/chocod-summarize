@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.chocod.summarize.dao.mapper.OperateLogMapper" >
+  <resultMap id="BaseResultMap" type="com.chocod.summarize.dao.entity.OperateLog" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="store_no" property="storeNo" jdbcType="VARCHAR" />
+    <result column="operate_type" property="operateType" jdbcType="VARCHAR" />
+    <result column="operate_account" property="operateAccount" jdbcType="VARCHAR" />
+    <result column="operate_employee" property="operateEmployee" jdbcType="VARCHAR" />
+    <result column="master_info" property="masterInfo" jdbcType="VARCHAR" />
+    <result column="slave_info" property="slaveInfo" jdbcType="VARCHAR" />
+    <result column="create_id" property="createId" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_id" property="updateId" jdbcType="VARCHAR" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="status" property="status" jdbcType="TINYINT" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, store_no, operate_type, operate_account, operate_employee, master_info, slave_info, 
+    create_id, create_time, update_id, update_time, status
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from operate_log
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from operate_log
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.chocod.summarize.dao.entity.OperateLog" >
+    insert into operate_log (id, store_no, operate_type, 
+      operate_account, operate_employee, master_info, 
+      slave_info, create_id, create_time, 
+      update_id, update_time, status
+      )
+    values (#{id,jdbcType=BIGINT}, #{storeNo,jdbcType=VARCHAR}, #{operateType,jdbcType=VARCHAR}, 
+      #{operateAccount,jdbcType=VARCHAR}, #{operateEmployee,jdbcType=VARCHAR}, #{masterInfo,jdbcType=VARCHAR}, 
+      #{slaveInfo,jdbcType=VARCHAR}, #{createId,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{updateId,jdbcType=VARCHAR}, #{updateTime,jdbcType=TIMESTAMP}, #{status,jdbcType=TINYINT}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.chocod.summarize.dao.entity.OperateLog" >
+    insert into operate_log
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="storeNo != null" >
+        store_no,
+      </if>
+      <if test="operateType != null" >
+        operate_type,
+      </if>
+      <if test="operateAccount != null" >
+        operate_account,
+      </if>
+      <if test="operateEmployee != null" >
+        operate_employee,
+      </if>
+      <if test="masterInfo != null" >
+        master_info,
+      </if>
+      <if test="slaveInfo != null" >
+        slave_info,
+      </if>
+      <if test="createId != null" >
+        create_id,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="updateId != null" >
+        update_id,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="storeNo != null" >
+        #{storeNo,jdbcType=VARCHAR},
+      </if>
+      <if test="operateType != null" >
+        #{operateType,jdbcType=VARCHAR},
+      </if>
+      <if test="operateAccount != null" >
+        #{operateAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="operateEmployee != null" >
+        #{operateEmployee,jdbcType=VARCHAR},
+      </if>
+      <if test="masterInfo != null" >
+        #{masterInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="slaveInfo != null" >
+        #{slaveInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="createId != null" >
+        #{createId,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateId != null" >
+        #{updateId,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=TINYINT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.chocod.summarize.dao.entity.OperateLog" >
+    update operate_log
+    <set >
+      <if test="storeNo != null" >
+        store_no = #{storeNo,jdbcType=VARCHAR},
+      </if>
+      <if test="operateType != null" >
+        operate_type = #{operateType,jdbcType=VARCHAR},
+      </if>
+      <if test="operateAccount != null" >
+        operate_account = #{operateAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="operateEmployee != null" >
+        operate_employee = #{operateEmployee,jdbcType=VARCHAR},
+      </if>
+      <if test="masterInfo != null" >
+        master_info = #{masterInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="slaveInfo != null" >
+        slave_info = #{slaveInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="createId != null" >
+        create_id = #{createId,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateId != null" >
+        update_id = #{updateId,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=TINYINT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.chocod.summarize.dao.entity.OperateLog" >
+    update operate_log
+    set store_no = #{storeNo,jdbcType=VARCHAR},
+      operate_type = #{operateType,jdbcType=VARCHAR},
+      operate_account = #{operateAccount,jdbcType=VARCHAR},
+      operate_employee = #{operateEmployee,jdbcType=VARCHAR},
+      master_info = #{masterInfo,jdbcType=VARCHAR},
+      slave_info = #{slaveInfo,jdbcType=VARCHAR},
+      create_id = #{createId,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_id = #{updateId,jdbcType=VARCHAR},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      status = #{status,jdbcType=TINYINT}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  
+  <sql id="Base_Condition">
+        <where>
+        	<if test="minId != null">and id >= #{minId,jdbcType=BIGINT}</if>
+        	<if test="maxId != null"><![CDATA[and id <= #{maxId,jdbcType=BIGINT}]]></if>
+            <if test="storeNo != null">and store_no = #{storeNo,jdbcType=VARCHAR}</if>
+            <if test="operateType != null">and operate_type = #{operateType,jdbcType=VARCHAR}</if>
+            <if test="operateAccount != null">and operate_account = #{operateAccount,jdbcType=VARCHAR}</if>
+            <if test="operateEmployee != null">and operate_employee = #{operateEmployee,jdbcType=VARCHAR}</if>
+            <if test="masterInfo != null">and master_info = #{masterInfo,jdbcType=VARCHAR}</if>
+            <if test="status != null and status>=0 ">and status = #{status,jdbcType=TINYINT}</if>
+        </where>
+    </sql>
+  
+  <select id="select" resultMap="BaseResultMap" parameterType="java.util.HashMap" >
+    select 
+    	<include refid="Base_Column_List" />
+    from operate_log
+    	<include refid="Base_Condition" />
+    order by id desc 
+  </select>
+  
+</mapper>

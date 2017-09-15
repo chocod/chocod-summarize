@@ -1,0 +1,17 @@
+{
+    "curPage": 1,
+    "pageNum": 10,
+    "totalNum": 1,
+    "totalPage": 1,
+    "dataList": [
+        {
+            "boxNoList": [
+                "1001",
+                "1002"
+            ],
+            "packCompleteTime": "2017-03-01 11:26:37",
+            "stallNo": "36",
+            "waveOrderNo": "1001201703010800001"
+        }
+    ]
+}

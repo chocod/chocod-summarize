@@ -1,0 +1,30 @@
+{
+  "token": "d42f4d57-2db2-4a19-9e55-6c7beb02ee67",
+  "id": 1,
+  "orderNo": "张三",
+  "eMobile": "13000000000",
+   eMobile
+  "storeId": "1",
+  "storeName": "江汉店",
+  "courseId": "1,2,3",
+  "isAdmin": 0,
+  "roleId": "1",
+  "eMenu": [
+    {
+      "menuCode": "1",
+      "menuName": "监控"
+    },
+    {
+      "menuCode": "2",
+      "menuName": "拣分货"
+    },
+    {
+      "menuCode": "3",
+      "menuName": "设置"
+    },
+    {
+      "menuCode": "4",
+      "menuName": "预警设置"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <!-- 数据库驱动包位置 (需要根据自己的路径修改)-->
+<!--     <classPathEntry location="F:\mysql-connector-java-5.1.39-bin.jar"/> -->
+	<classPathEntry location="F:\mysql-connector-java-5.1.39-bin.jar"/>
+    <context id="Tables" targetRuntime="MyBatis3">
+        <commentGenerator>
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+        <!-- 数据库链接URL、用户名、密码 （定制修改）-->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://db02.dev.fn.com:3306/fnyxpicking?characterEncoding=utf-8&amp;useUnicode=true&amp;zeroDateTimeBehavior=convertToNull" userId="su_fnyxpicking" password="npuJb3yP2Z">
+        </jdbcConnection> 
+        
+        <!-- <jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver" connectionURL="jdbc:oracle:thin:@10.202.249.73:1521:CORD"
+                        userId="UCORDERP" password="q4oxh75fc1"></jdbcConnection> -->
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+        <!-- 生成模型的包名和位置 （targetPackage和targetProject根据自己要求修改）-->
+        <javaModelGenerator targetPackage="com.chocod.summarize.dao.entity"
+                            targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+<!--         生成的映射文件包名和位置 （targetPackage和targetProject根据自己要求修改） -->
+        <sqlMapGenerator targetPackage="com.chocod.summarize.dao.relation"
+                         targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+<!--         生成DAO的包名和位置 （targetPackage和targetProject根据自己要求修改） -->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.chocod.summarize.dao.mapper"
+                             targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+<!--         要生成那些表(更改tableName和domainObjectName就可以，多个表的话复制table标签在后边排列即可) -->
+        <table tableName="operate_log" domainObjectName="operateLog" enableCountByExample="false"
+               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false"/>
+    </context>
+</generatorConfiguration>
+<!-- enableSelectByPrimaryKey=”true” 
+	enableUpdateByPrimaryKey=”true” 
+	enableDeleteByPrimaryKey=”true”  -->
+<!-- mvn命令-->
+<!-- mybatis-generator:generate -->

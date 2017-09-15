@@ -1,0 +1,35 @@
+{
+    "curPage": 1,
+    "pageNum": 10,
+    "totalNum": 1,
+    "totalPage": 1,
+    "dataList": [
+        {
+            "boxNoList": [
+                "1001",
+                "1002"
+            ],
+            "dispatchAccountUsername": "李XX",
+            "dispatchSubmitTime": "2017-03-01 14:06:24",
+            "packCompleteTime": "2017-03-01 14:06:24",
+            "packEmployeeName": "李四",
+            "packEmployeeNo": "1001",
+            "pickAreaName": "生鲜",
+            "pickAreaNo": "A01",
+            "pickCreateTime": "2017-03-01 14:06:24",
+            "pickEmployeeName": "张三",
+            "pickEmployeeNo": "0001",
+            "pickFinishTime": "2017-03-01 14:06:24",
+            "pickOrderNo": "100120170301080000101",
+            "pickStartTime": "2017-03-01 14:06:24",
+            "pickStatus": 1,
+            "pickStatusName": "未分配",
+            "stallNo": "36",
+            "vehicleNoList": [
+                "1001",
+                "1002"
+            ],
+            "waveOrderNo": "1001201703010800001"
+        }
+    ]
+}

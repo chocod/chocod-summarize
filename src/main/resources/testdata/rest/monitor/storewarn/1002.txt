@@ -1,0 +1,22 @@
+{
+    "deliveryOrder": [
+        1,
+        1
+    ],
+    "packageOrder": [
+        9,
+        0
+    ],
+    "pickGoodOrder": [
+        15,
+        0
+    ],
+    "pickHoldOrder": [
+        15,
+        5
+    ],
+    "presetOrder": [
+        100,
+        80
+    ]
+}

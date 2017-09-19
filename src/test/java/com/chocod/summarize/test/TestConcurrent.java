@@ -23,7 +23,8 @@ public class TestConcurrent {
 	        }  
 	        synchronized (flag) {  
 	            flag[0] = "false";  
-	            flag.notifyAll();  
+	            flag.notifyAll(); 
+	            flag.notify();
 	        }  
 	    }  
 	};  
@@ -45,7 +46,7 @@ public class TestConcurrent {
 	                    e.printStackTrace();  
 	                }  
 	                waitTime = System.currentTimeMillis() - waitTime;  
-	                System.out.println("wait time :" + waitTime);  
+	                System.out.println(getName() + " wait time :" + waitTime);  
 	            }  
 	            System.out.println(getName() + " end waiting!");  
 	        }  

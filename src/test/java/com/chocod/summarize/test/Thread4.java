@@ -32,10 +32,20 @@ public class Thread4 extends Thread {
         }  
     }  
       
+    
+    /**
+     * 
+     * @param args
+     */    
     public static void main(String[] args){  
         Thread4 t4 = new Thread4(Thread.currentThread()); 
         t4.setName("t4 thread");
-        t4.setUncaughtExceptionHandler(new UncaughtExceptionHandler() {			
+        t4.setUncaughtExceptionHandler(new UncaughtExceptionHandler() {	
+        	/**
+             * 当实现了UncaughtExceptionHandler接口并注入到某个线程时，
+             * 该线程会在自己的线程中执行接口实现代码，入参thread和currentThread相同
+             * @param args
+             */
 			@Override
 			public void uncaughtException(Thread t, Throwable e) {
 				// TODO Auto-generated method stub

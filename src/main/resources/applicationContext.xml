@@ -20,8 +20,9 @@
 	<import resource="applicationContext-mybatis.xml" />
 	
 	<!-- dubbo provider -->
+	<!--
 	<import resource="dubbo-provider.xml" />
-
+	-->
 	<!-- 线程池 -->
 	<bean id="threadPoolTaskExecutor" 	class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">
 		<property name="corePoolSize" value="8" />

@@ -39,5 +39,7 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd"
 			<value>.jsp</value>
 		</property>
 	</bean>
+	
+	
 
 </beans>

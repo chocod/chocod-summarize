@@ -9,5 +9,11 @@
 <head>
 <title>测试页面</title>
 </head>
-<body>服务端传递信息：${hello }</body>
+<body>
+服务端传递信息：${hello }
+
+<c:forEach items="${operateLogs }" varStatus="vs" var="operateLog">
+	${operateLog.id }</br>
+</c:forEach>
+</body>
 </html>
